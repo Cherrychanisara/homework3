@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wall {
+    display: flex;
+    /* Enables flexbox */
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    height: 100vh;
+    /* Full viewport height */
+    background-image: url('https://images.pexels.com/photos/2078266/pexels-photo-2078266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.con {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    
+}
+
+.head {
+    font-size: 50px;
+    /* This now works correctly */
+    line-height: 0.5rem;
+}
+
+.componant-bar {
+    width: 350px;
+
+    margin: 0 auto;
+    /* Centers the bar horizontally */
+    padding: 10px;
+    text-align: center;
+    /* Centers text within the bar */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.bar {
+    height: 6px;
+    width: 100%;
+    /* Full width of the parent */
+    background-color: white;
+    /* Progress bar background color */
+    /* border-radius: 3px; */
+    /* Rounded corners */
+    margin-top: 5px;
+    /* Space above the bar */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    /* Subtle shadow */
+}
+
+.bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 75%;
+    background-color: #88ecf3;
+    transition: width 0.5s ease;
+}
+
+.persent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+
+button {
+    background-color: #88ecf3;
+    width: 100px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px; 
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+button:hover {
+    background-color: #ffffff; /* Darkens the button color on hover */
+    transform: scale(1.1); /* Slightly enlarges the button on hover */
+}
+
+button:active {
+    transform: scale(2); /* Scales the button when it's clicked */
+    background-color: #4ea9b5; /* Optional: Change color during click */
+}
+
+.componant-icon {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    width:200px;
+}
+
+.icon {
+    width: 40px; /* Set width */
+    height: 40px; /* Set height (equal to width for a circle) */
+    border-radius: 9999px; /* Makes it a circle */
+    display: flex; /* Enables flexbox for centering */
+    align-items: center; /* Vertically centers the icon */
+    justify-content: center; /* Horizontally centers the icon */
+    color: white; /* Icon color */
+    font-size: 20px; /* Adjust size of the icon */
+    border: 0.5px solid white; /* Adds a white border */
+    box-sizing: border-box; /* Ensures the border does not affect the size */
+    overflow: hidden; /* Ensures no extra content overflows */
+    padding-top: 4px; 
+}
+
+.home-button {
+    position: fixed; /* Fixes the button on the screen */
+    top: 20px; /* Distance from the top */
+    right: 70px; /* Distance from the right */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+}
+
+.bottom-line {
+    width: 90%; /* Full width minus the margins */
+    border: none; /* Removes default border style */
+    border-top: 1px solid rgb(173, 173, 173); /* Adds a light gray line */
+    position: fixed; /* Fixes the line to the viewport */
+    bottom: 40px; /* Places the line 40px above the bottom of the viewport */
+    left: 5%; /* Centers the line by accounting for margins */
+    margin: 0; /* Ensures no additional margins are applied */
+}
+
+.bottom {
+    width: 90%; /* Full width minus the margins */
+    position: fixed; /* Fixes the text to the viewport */
+    bottom: 20px; /* Places the text 20px above the bottom of the viewport */
+    left: 5%; /* Centers the text by accounting for margins */
+    margin: 0; /* Ensures no additional margins are applied */
+    color: rgb(173, 173, 173);; /* Text color */
+    text-align: center; /* Centers the text horizontally */
+    font-size: 14px; /* Adjusts font size for readability */
+    font-family: Arial, sans-serif; /* Adds a clean font */
+}
